@@ -15,16 +15,17 @@ function taskReducer(state = initialState, action) {
         case ADD_TASK:
             return {
                 ...state,
-/*
+
                 tasks: [
                     ...state.tasks,
                     {description: action.payload, completed: false, id: Date.now() }
                 ]    
-*/                
+ 
+/*  DOES NOT provide unique key prop            
                 tasks: [
                     ...state.tasks, action.payload
                 ]
-
+*/
 
             }
         
