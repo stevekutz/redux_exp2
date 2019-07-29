@@ -1,0 +1,8 @@
+.titleFC_Container{
+    border: 1px solid blue;
+}
+
+.titleFC_Container h6 {
+    color: forestgreen;
+    width: 80%;
+}

@@ -1,0 +1,21 @@
+.taskListContainer{
+    border: 3px solid violet;
+}
+
+.taskListContainer h6{
+    width: 100%;
+    margin: 1px;
+    padding: 0px;
+}
+
+.tasksItems{
+    color: darkblue;
+}
+
+.taskListContainer button {
+    border: 1px solid black;
+    background: lightblue;
+    color: black;
+    border-radius: 5px;
+    width: 50%;
+}

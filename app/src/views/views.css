@@ -1,0 +1,41 @@
+.sharedState{
+    border: 1px solid grey;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    box-shadow: 0 2px 2px #ccc;
+    padding: 4px;
+    margin: 2px auto;
+
+}
+h6{
+    border: 1px solid red;
+    
+    color: hotpink;
+    margin: 0;
+    padding: 2px;
+    width: 60%;
+    margin: 0 auto;
+}    
+h6 span {
+    color: black;
+}
+
+input, button{
+    width: 70%;
+    margin: 0 auto;
+}
+.tasksMainContainer{
+    border: 5px solid indigo;
+}
+
+.counterMainContainer{
+    border: 5px solid red;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  
+  }
+  
+
