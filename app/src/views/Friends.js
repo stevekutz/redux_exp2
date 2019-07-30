@@ -8,7 +8,8 @@ import '../styles/friends.css';
 class Friends extends React.Component{
     state = {
         newFriend: '',
-        age: 21
+        age: 21,
+        placeholder: 'new friend!'
     }
 
     addFriend_h = ev => {
@@ -36,8 +37,9 @@ class Friends extends React.Component{
             <div className = 'friendsContainer'>
                <h4>Goal {this.props.goal}</h4>    
                {(this.props.goal <= this.props.friends.length) ?
-                <h6 className = 'goalMessage'> <span role = "img" aria-label="balloon">🎈🎈</span> GOAL MET !!! <span role = "img" aria-label="balloon">🎈🎈</span></h6> : null} 
-               <p className = 'totalFriends'>Total {this.props.friends.length}</p>
+                <h6 className = 'goalMessage'> 
+                    <span role = "img" aria-label="balloon">🎈🎈</span> GOAL MET !!! <span role = "img" aria-label="balloon">🎈🎈</span></h6> : null} 
+                <p className = 'totalFriends'>Total {this.props.friends.length}</p>
                {this.props.friends.map( (person, index) =>  (
                     <Friend peep = {person} key = {index}/>
                ))}
@@ -48,9 +50,9 @@ class Friends extends React.Component{
                     name = 'newFriend'
                     value = {this.state.newFriend}
                     onChange = {this.handleInputs}
-                    placeholder = 'placeholder text'    
+                    placeholder = {this.state.placeholder}   
                 />
-                <button onClick = {this.addFriend_h}> Add Friend</button>
+                <button onClick = {this.addFriend_h}> Add</button>
                </form> 
             </div>
         )

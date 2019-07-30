@@ -14,3 +14,14 @@
     color: dodgerblue;
     width: 100%;
 }
+.friendsContainer input{
+    text-align: center;
+    border-radius: 3px;
+}
+
+.friendsContainer button {
+    border: 1px solid dodgerblue;
+    background: lemonchiffon;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px #ccc;
+}
