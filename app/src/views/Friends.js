@@ -32,6 +32,9 @@ class Friends extends React.Component{
                {this.props.friends.map( (person, index) =>  (
                     <Friend peep = {person} key = {index}/>
                ))}
+               {(this.props.goal === this.props.friends.length) ?
+                <h2> GOAL MET !!!</h2> : null} 
+
                <form>
                 <input 
                     type = 'text'
