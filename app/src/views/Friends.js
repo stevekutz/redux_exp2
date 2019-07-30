@@ -1,7 +1,8 @@
 import React from 'react';
-import {connect} from 'react=redux';
+import {connect} from 'react-redux';
 
-import {addFriend} from './actions/actionsFriends';
+import {addFriend} from '../actions/actionsFriends';
+import Friend from './Friend';
 
 class Friends extends React.Component{
     state = {
@@ -22,9 +23,10 @@ class Friends extends React.Component{
     }
 
     render() {
+
         return(
             <div className = 'friendsContainer'>
-               <h4>Goal </h4>    
+               <h4>Goal {this.props.goal}</h4>    
                <p>Total</p>
                {this.props.friends.map( (person, index) =>  (
                     <Friend peep = {person} key = {index}/>
@@ -32,20 +34,25 @@ class Friends extends React.Component{
                <form>
                 <input 
                     type = 'text'
+                    name = 'newFriend'
                     value = {this.state.newFriend}
                     onChange = {this.handleInputs}
                     placeholder = 'placeholder text'    
                 />
-                <button onClick = { () => {this.addFriend_h} }> Add Friend</button>
+                <button onClick = {this.addFriend_h}> Add Friend</button>
                </form> 
             </div>
         )
     }
 }
 
+// NO!!!   <button onClick = { () => {this.addFriend_h} }> Add Friend</button>
+
 const mapStateToProps = state => {
     return {
-        friends: state.friends.friends
+        friends: state.friends.friends,
+        goal: state.friends.goal,
+
     }
 }
 

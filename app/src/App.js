@@ -5,8 +5,9 @@ import Title from './views/Title';
 import TitleView from './views/TitleView';
 import TitleComponent from './components/TitleComponent';
 import Counter from './views/Counter';
-
 import Tasks from './views/Tasks';
+import Friends from './views/Friends';
+
 
 function App() {
   return (
@@ -31,7 +32,12 @@ function App() {
               <div className = 'counterMainContainer'>
                 <Counter />
               </div>
-  
+
+              <div className = 'friendsMainContainer'>
+                <Friends />
+              </div>
+
+
             </div>
             
         </div>
