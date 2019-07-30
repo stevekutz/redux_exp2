@@ -13,13 +13,20 @@ class Friends extends React.Component{
 
     addFriend_h = ev => {
         ev.preventDefault();
-        this.props.addFriend(this.state.newFriend); // call action creator
-        this.setState({newFriend: ''})
+
+       if(this.state.newFriend !== '') {
+           // ev.preventDefault();
+            this.props.addFriend(this.state.newFriend); // call action creator
+            this.setState({newFriend: ''})
+        }     
+
+   
     }
 
     handleInputs = ev => {
         this.setState({
-            [ev.target.name]: ev.target.value
+            //    newFriend: ev.target.value
+             [ev.target.name]: ev.target.value   // this resets page if blank input
         });
     }
 
@@ -28,12 +35,12 @@ class Friends extends React.Component{
         return(
             <div className = 'friendsContainer'>
                <h4>Goal {this.props.goal}</h4>    
+               {(this.props.goal <= this.props.friends.length) ?
+                <h2> GOAL MET !!!</h2> : null} 
                <p className = 'totalFriends'>Total {this.props.friends.length}</p>
                {this.props.friends.map( (person, index) =>  (
                     <Friend peep = {person} key = {index}/>
                ))}
-               {(this.props.goal === this.props.friends.length) ?
-                <h2> GOAL MET !!!</h2> : null} 
 
                <form>
                 <input 
