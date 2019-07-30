@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {increment, decrement, reset} from '../actions/actionsCounter';
-import './counter.css';
-
+// import './st /counter.css';
+import '../styles/counter.css';
 
 class Counter extends Component {
     state = {

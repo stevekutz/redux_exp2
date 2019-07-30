@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {addTask, toggleTask} from '../actions/actionsTasks';
-import './tasks.css';
+//import './tasks.css';
+import '../styles/tasks.css';
 
 // 1) 
 class Tasks extends Component {

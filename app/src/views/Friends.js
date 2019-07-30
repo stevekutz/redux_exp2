@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 import {addFriend} from '../actions/actionsFriends';
 import Friend from './Friend';
+import '../styles/friends.css';
 
 class Friends extends React.Component{
     state = {
@@ -27,7 +28,7 @@ class Friends extends React.Component{
         return(
             <div className = 'friendsContainer'>
                <h4>Goal {this.props.goal}</h4>    
-               <p>Total</p>
+               <p className = 'totalFriends'>Total {this.props.friends.length}</p>
                {this.props.friends.map( (person, index) =>  (
                     <Friend peep = {person} key = {index}/>
                ))}

@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+//import './App.css';
+import './styles/App.css';
 
 import Title from './views/Title';
 import TitleView from './views/TitleView';

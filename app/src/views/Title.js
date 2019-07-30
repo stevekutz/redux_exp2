@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {updateTitle} from '../actions/actionsTitle';
-import './views.css'; 
+//import './views.css'; 
+import '../styles/views.css';
 
 class Title extends React.Component {
     state = {

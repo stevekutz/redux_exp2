@@ -1,3 +1,4 @@
 import React from 'react';
+import '../styles/friends.css';
 
-export default props => <h3> {props.peep}</h3>;
+export default props => <p className = 'friendItem'> {props.peep}</p>;
