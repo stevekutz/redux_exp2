@@ -36,7 +36,7 @@ class Friends extends React.Component{
             <div className = 'friendsContainer'>
                <h4>Goal {this.props.goal}</h4>    
                {(this.props.goal <= this.props.friends.length) ?
-                <h2> GOAL MET !!!</h2> : null} 
+                <h6 className = 'goalMessage'> <span role = "img" aria-label="balloon">🎈🎈</span> GOAL MET !!! <span role = "img" aria-label="balloon">🎈🎈</span></h6> : null} 
                <p className = 'totalFriends'>Total {this.props.friends.length}</p>
                {this.props.friends.map( (person, index) =>  (
                     <Friend peep = {person} key = {index}/>

@@ -9,3 +9,8 @@
     margin: 0;
     color: deeppink;
 }
+
+.goalMessage {
+    color: dodgerblue;
+    width: 100%;
+}
