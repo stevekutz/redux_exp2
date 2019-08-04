@@ -3,6 +3,7 @@ import React from 'react';
 import './styles/App.css';
 
 import Title from './views/Title';
+import Title2 from './views/Title2';
 import TitleView from './views/TitleView';
 import TitleComponent from './components/TitleComponent';
 import Counter from './views/Counter';
@@ -16,7 +17,7 @@ function App() {
         <div className = "allSharedState">
           <h4>All shared Same State</h4>
           <Title />
-          <Title />
+          <Title2 />
           <TitleView />
           <TitleComponent />
         </div>
