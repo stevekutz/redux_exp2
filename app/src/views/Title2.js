@@ -7,7 +7,7 @@ import '../styles/views.css';
 
 class Title2 extends React.Component {
     state = {
-        newTitleText: this.props.title
+        newTitleText: this.props.titleProp
     }
 
     handleChange = ev => {
@@ -24,17 +24,19 @@ class Title2 extends React.Component {
     }    
 
     render() {
+
         return (
             <div className = 'sharedState'> 
-               <h6> <span>Shared state:</span> {this.props.title}</h6> 
+               <h6> <span>Shared state:</span> {this.props.titleProp}</h6> 
+    
                <input 
                 type = 'text'
-                name = 'newTitleText'
-                value = {this.state.newTitleText}
+                name = 'newTitleText'   // passed to handler
+                value = {this.state.newTitleText}   // shows in text field
                 onChange = {this.handleChange}
                />
                <button onClick = {this.updateTitle}> Update Title</button>
-            </div>
+            </div> 
         );
     }
 }
@@ -44,7 +46,7 @@ class Title2 extends React.Component {
 const mapStateToProps = state => {
     return {
         //title: state.title   BEFORE Combine Reducers
-        title: state.titleReducer.title   // AFTER Combine Reducers
+        titleProp: state.titleReducer.title   // AFTER Combine Reducers
     };
 };
 
