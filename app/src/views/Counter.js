@@ -4,6 +4,7 @@ import {increment, decrement, reset} from '../actions/actionsCounter';
 // import './st /counter.css';
 import '../styles/counter.css';
 
+// view receives functions from actions
 class Counter extends Component {
     state = {
         count: 1010   
